@@ -9,8 +9,8 @@ interface IError {
   body: string
 }
 
-export const ErrorLib = {
-  format_(exception: Error): IError {
+export const errorHandler = {
+  format(exception: Error): IError {
     const areErrorHandled = exception.message.includes('areErrorHandled')
     if (areErrorHandled) {
       const error = JSON.parse(exception.message)
@@ -30,7 +30,7 @@ export const ErrorLib = {
     }
   },
 
-  generate_(errorNumber: IErrorNumber): Error {
+  generate(errorNumber: IErrorNumber): Error {
     let error = errorsMessages[errorNumber]
     const errorResponse = {
       statusCode: error[0],

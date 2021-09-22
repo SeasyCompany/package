@@ -1,2 +1,2 @@
 export * from './src/helpers/sortProductsByPrice'
-export * from './src/libs/ErrorLib'
+export * from './src/helpers/errorHandler'

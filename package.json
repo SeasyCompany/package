@@ -1,10 +1,9 @@
 {
   "name": "@vmotta8/price-comparison",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "main": "index.js",
   "scripts": {
-    "build": "rimraf dist && tsc",
-    "prepare": "npm run build",
+    "build": "rimraf dist && tsc && cp package.json dist/ && cp README.md dist/",
     "lint": "eslint --fix 'src/**/*.ts' && eslint --fix 'test/**/*.ts'",
     "test": "jest --runInBand",
     "test:unit": "npm test -- --watch -c jest-unit.config.js",

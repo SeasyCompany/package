@@ -8,14 +8,16 @@ describe('sortProductsByPrice', () => {
       price: 10,
       image: 'image',
       location: 'location',
-      marketplace: 'marketplace'
+      marketplace: 'marketplace',
+      title: 'product'
     },
     {
       url: 'url',
       price: 20,
       image: 'image',
       location: 'location',
-      marketplace: 'marketplace'
+      marketplace: 'marketplace',
+      title: 'product'
     }
   ]
   it('should return sorted products', () => {

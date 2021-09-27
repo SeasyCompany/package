@@ -4,4 +4,5 @@ export interface IProduct {
   marketplace: string;
   location: string;
   image: string;
+  title: string;
 }

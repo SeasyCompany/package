@@ -1,3 +1,7 @@
+export interface IVariations {
+  name: string;
+  options: string[];
+}
 export interface IProduct {
   url: string;
   price: number;
@@ -5,4 +9,5 @@ export interface IProduct {
   location: string;
   image: string;
   title: string;
+  variations: IVariations[];
 }

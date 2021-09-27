@@ -1,3 +1,3 @@
 export * from './helpers/sortProductsByPrice'
-export * from './helpers/filterProductsByTitle'
+export * from './helpers/filterProductsByDetails'
 export * from './helpers/errorHandler'

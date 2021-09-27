@@ -1,9 +1,10 @@
 import { IProduct } from '../dtos/IProduct'
 
-export const filterProductsByTitle = (products: IProduct[], productName: string): IProduct[] => {
+export const filterProductsByDetails = (products: IProduct[], productName: string): IProduct[] => {
   const productNameArray = formatString(productName).split(' ')
   const filteredProducts = products.filter(product => {
-    return productNameArray.every(word => formatString(product.title).includes(word))
+    const stringToCompare = `${product.title + JSON.stringify(product.variations)}`
+    return productNameArray.every(word => formatString(stringToCompare).includes(word))
   })
   return filteredProducts
 }

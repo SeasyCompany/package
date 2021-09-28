@@ -9,6 +9,6 @@ export const filterProductsByDetails = (products: IProduct[], productName: strin
   return filteredProducts
 }
 
-const formatString = (str: string): string => {
+export const formatString = (str: string): string => {
   return str.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase();
 }

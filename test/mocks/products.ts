@@ -7,7 +7,7 @@ export const productsMock: IProduct[] = [
     image: 'image',
     location: 'location',
     marketplace: 'marketplace',
-    title: 'smártwatçh MI bând 5',
+    title: 'smártwatçh MI bând 5 xiaomi',
     variations: [
       {
         name: 'variation',
@@ -21,7 +21,7 @@ export const productsMock: IProduct[] = [
     image: 'image',
     location: 'location',
     marketplace: 'marketplace',
-    title: 'smártwatçh MI bând 6',
+    title: 'smártwatçh MI bând 6 xiaomi',
     variations: [
       {
         name: 'variation',

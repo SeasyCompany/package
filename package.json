@@ -1,6 +1,6 @@
 {
   "name": "@vmotta8/price-comparison",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "main": "index.js",
   "scripts": {
     "build": "rimraf dist && tsc && cp package.json dist/ && cp README.md dist/",

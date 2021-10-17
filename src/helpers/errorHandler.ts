@@ -30,14 +30,17 @@ export const errorHandler = {
     }
   },
 
-  generate (errorNumber: IErrorNumber): Error {
+  generate (errorNumber: IErrorNumber, exception?: Error): Error {
     const error = errorsMessages[errorNumber]
+    const statusCode = error[0] as number
+    const message = error[1] as string
+    const body: IBody = {
+      message,
+      stackTrace: exception?.stack || ''
+    }
     const errorResponse = {
-      statusCode: error[0],
-      body: JSON.stringify({
-        message: error[1],
-        stackTrace: ''
-      }),
+      statusCode,
+      body: JSON.stringify(body),
       areErrorHandled: true
     }
     return new Error(JSON.stringify(errorResponse))

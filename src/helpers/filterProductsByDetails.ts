@@ -1,6 +1,6 @@
 import { IProduct } from '../dtos/IProduct'
 
-const wordsToRemove = ['de', 'da', 'do', 'para']
+const wordsToRemove = ['de', 'da', 'do', 'para', 'e', 'and', '&']
 
 export const filterProductsByDetails = (products: IProduct[], productName: string): IProduct[] => {
   let productNameArray = formatString(productName).split(' ')

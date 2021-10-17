@@ -1,4 +1,4 @@
-import { IProduct } from "../../src/dtos/IProduct";
+import { IProduct } from '../../src/dtos/IProduct'
 
 export const productsMock: IProduct[] = [
   {
@@ -13,7 +13,7 @@ export const productsMock: IProduct[] = [
         name: 'variation',
         options: ['option']
       }
-    ] 
+    ]
   },
   {
     url: 'url',
@@ -27,6 +27,6 @@ export const productsMock: IProduct[] = [
         name: 'variation',
         options: ['top']
       }
-    ] 
+    ]
   }
 ]

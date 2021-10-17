@@ -10,7 +10,7 @@ interface IError {
 }
 
 export const errorHandler = {
-  format(exception: Error): IError {
+  format (exception: Error): IError {
     const areErrorHandled = exception.message.includes('areErrorHandled')
     if (areErrorHandled) {
       const error = JSON.parse(exception.message)
@@ -30,8 +30,8 @@ export const errorHandler = {
     }
   },
 
-  generate(errorNumber: IErrorNumber): Error {
-    let error = errorsMessages[errorNumber]
+  generate (errorNumber: IErrorNumber): Error {
+    const error = errorsMessages[errorNumber]
     const errorResponse = {
       statusCode: error[0],
       body: JSON.stringify({

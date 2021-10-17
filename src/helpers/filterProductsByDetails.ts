@@ -5,7 +5,7 @@ const wordsToRemove = ['de', 'da', 'do', 'para']
 export const filterProductsByDetails = (products: IProduct[], productName: string): IProduct[] => {
   let productNameArray = formatString(productName).split(' ')
   wordsToRemove.forEach(word => {
-    productNameArray = productNameArray.filter(item => item !== word);
+    productNameArray = productNameArray.filter(item => item !== word)
   })
 
   const filteredProducts = products.filter(product => {
@@ -16,5 +16,5 @@ export const filterProductsByDetails = (products: IProduct[], productName: strin
 }
 
 export const formatString = (str: string): string => {
-  return str.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase();
+  return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase()
 }
